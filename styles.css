@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'shadows_into_lightregular';
+  src: url('fonts/shadowsintolight-regular-webfont.woff2') format('woff2'),
+       url('fonts/shadowsintolight-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.html {
+  background-color: black;
+}
+
+body {
+  background-color: black;
+  color: rgb(216, 216, 216);
+  font-family: 'shadows_into_lightregular';
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  
+  display: flex;
+  justify-content: center;
+  font-size: 36x;
+  margin-bottom: -50px;
+
+}
+.content {
+  display: flex;
+  justify-content: center;
+  
+  font-size: 48px;
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: -40px;
+
+}
+.playerscore {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.rounds {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.cpuscore {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+#numrounds {
+  display: flex;
+  justify-content: center;
+}
+
+#numplayerscore {
+  display: flex;
+  justify-content: center;
+}
+#numcpuscore {
+  display: flex;
+  justify-content: center;
+}
+.prompts {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-size: 46px;
+  margin: 16px;
+  padding: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+  align-items: flex-end;
+
+
+
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+#restartbtn {
+  display: flex;
+  width: 128px;
+  height: 64px;
+  font-size: 32px;
+  font-family: 'shadows_into_lightregular';
+  justify-content: center;
+}
+
+#rock {
+  
+  background-image: url('media/rock.png');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  font-size: 2rem;
+  border-radius: 32px;
+}
+
+#scissors {
+  background-image: url('media/scissors.jpeg');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  font-size: 2rem;
+  border-radius: 32px;
+}
+
+#paper {
+  background-image: url('media/paper.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  font-size: 2rem;
+  border-radius: 32px;
+}
+
+button {
+  display: flex;
+  flex: 1, 1;
+  margin: 16px;
+}
+
+#restartbtn

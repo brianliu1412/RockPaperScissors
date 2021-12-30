@@ -1,105 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
   <meta charset="UTF-8">
 </head>
 
 <body>
-  <script>
-    function computerPlay() {
-      const randomArray = ["rock", "paper", "scissors"];
-      return randomArray[Math.floor(Math.random()*3)];
-    }
-
-    function playRound(playerSelection, computerSelection) {
-      let player = playerSelection.toLowerCase();
-
-      if (player === "rock") {
-        if (computerSelection === "paper") {
-          return "CPU Wins! Rock Paper beats Rock.";
-        }
-        else if (computerSelection === "scissors") {
-          return "You Win! Rock beats Scissors.";
-        }
-        else {
-          return "It was a tie.";
-        }
-      }
-
-      else if (player === "paper") {
-        if (computerSelection === "scissors") {
-          return "CPU Wins! Scissors beats Paper.";
-        }
-        else if (computerSelection === "rock") {
-          return "You Win! Paper beats Rock.";
-        }
-        else {
-          return "It was a tie.";
-        }
-      }
-
-      else if (player === "scissors") {
-        if (computerSelection === "rock") {
-          return "CPU Wins! Rock beats Scissors.";
-        }
-        else if (computerSelection === "paper") {
-          return "You Win! Scissors beats Paper.";
-        }
-        else {
-          return "It was a tie.";
-        }
-      }
-    }
-
-      
-
-    function game() {
-      let cpuTotalWins = 0;
-      let playerTotalWins = 0;
-      let ties = 0;
-      let rounds = 0;
-      for (let i = 0; i < 5; i++) {
-        
-        
-        const randomArray = ["rock", "paper", "scissors"];
-        let temp = 1;
-        let updatedMove = "";
-        while (temp === 1) {
-          let playerMove = prompt("What is your move? Please enter: rock, paper, or scissors");
-            if (randomArray.includes(playerMove)) {
-              temp = 0;
-              updatedMove = playerMove;
-            }
-        }
-
-        
-        let cpuMove = computerPlay();
-        let round = playRound(updatedMove, cpuMove);
-        let str = round.charAt(0);
-          
-        if (str === "C") {
-          cpuTotalWins += 1;
-          rounds += 1;
-        }
-        else if (str[0] === "Y") {
-          playerTotalWins += 1;
-          rounds += 1;
-        }
-        else {
-          ties += 1;
-          rounds += 1;
-        }
-
-        console.log(round);
-      }
-      console.log(`You played ${rounds} rounds. You won ${playerTotalWins} times and
-      you lost ${cpuTotalWins} times.`);
-
-    }
-
-    game();
-
-  </script>
+  <div class="container">
+    <div class="name">
+      <h1>Welcome to Rock Paper Scissors!</h1>
+    </div>
+    <div class="content">
+      <p id="prompt">
+        Play Rock Paper Scissors against a CPU! First to five wins. 
+      </p>
+    </div>
+    <div class="scores">
+      <div class="playerscore">
+        <h3 id="playerlabel">Your Score: </h3>
+        <h2 id="numplayerscore">0</h3>
+      </div>
+      <div class="rounds">
+        <h3>Rounds Played:</h3>  
+        <h2 id="numrounds">0</h2>   
+      </div>
+      <div class="cpuscore">
+        <h3 id="cpulabel">CPU Score: </h3>
+        <h2 id="numcpuscore">0</h3>
+      </div>
+    </div>
+    </div>
+    <div class="buttons">
+      <button type="button" id="rock"></button>
+      <button type="button" id="scissors"></button>
+      <button type="button" id="paper"></button>
+    </div>
+    
+  </div>
+  <div class='restart'>
+    <button type="button" id="restartbtn">Restart!</button>
+  </div>
+  
+  
+  
+  
 </body>
 </html>
